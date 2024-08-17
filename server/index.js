@@ -7,9 +7,7 @@ http = require("http").createServer()
 const app = express()
 app.use(express.json())
 app.use(cors({origin: true}))
-app.get("/", (req, res)=>{
-    res.send("server is running")
-})
+
 
 app.post("/", async (req, res)=>{
     const  { username} = req.body
